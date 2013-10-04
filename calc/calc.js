@@ -78,3 +78,12 @@ $("#number_of_working_days").keyup(recalculate);
 $("#number_of_worked_days").keyup(recalculate);
 $("#min_salary").keyup(recalculate);
 $("#mrp").keyup(recalculate);
+
+
+
+$("#na_ruki").keyup(function() {
+	var na_ruki = $("#na_ruki").val();
+	var oklad = (na_ruki-min_salary/10)/0.81;
+	if (oklad < 0) oklad = 0;
+	$("#oklad").html(accounting.formatMoney(oklad));
+});
