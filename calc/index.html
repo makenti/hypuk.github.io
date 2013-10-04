@@ -12,6 +12,21 @@
       <script src="../../assets/js/html5shiv.js"></script>
       <script src="../../assets/js/respond.min.js"></script>
     <![endif]-->
+    <style type="text/css">
+      fieldset {
+          border: 1px groove #ddd !important;
+          padding: 0 1.4em 1.4em 1.4em !important;
+          margin: 0 0 1.5em 0 !important;
+          -webkit-box-shadow:  0px 0px 0px 0px #000;
+                  box-shadow:  0px 0px 0px 0px #000;
+      }
+
+      legend {
+        width:inherit; /* Or auto */
+        padding:0 10px; /* To give a bit of padding on the left and right */
+        border-bottom:none;
+      }
+    </style>
   </head>
   <body>
     <div class="global-container">
@@ -32,30 +47,38 @@
         <hr />
         <dl class="dl-horizontal">
           <dt>Минимальная ЗП</dt>
-          <dd><input type="text" id="min_salary" value="18660"></dd>
+          <dd id="min_salary"></dd>
 
           <dt>МРП</dt>
-          <dd><input type="text" id="mrp" value="1731"></dd>
+          <dd id="mrp"></dd>
         </dl>
 
         <dl class="dl-horizontal">
-          <dt>Начисление за месяц</dt>
-          <dd id="payed">-</dd>
-
-          <dt>Обязательные пенс. взносы</dt>
-          <dd id="pension">-</dd>
-
-          <dt>ИПН</dt>
-          <dd id="ipn">-</dd>
+            <dt>Начисление за месяц</dt>
+            <dd id="payed">-</dd>
         </dl>
 
-        <dl class="dl-horizontal">
-          <dt>Соц. отчисления</dt>
-          <dd id="soc_payment">-</dd>
+        <fieldset>
+          <legend>Вычитается в зп</legend>
+          <dl class="dl-horizontal">
+            <dt>Обязательные пенс. взносы</dt>
+            <dd id="pension">-</dd>
 
-          <dt>Соц. налог</dt>
-          <dd id="soc_tax">-</dd>
-        </dl>
+            <dt>ИПН</dt>
+            <dd id="ipn">-</dd>
+          </dl>
+        </fieldset>
+
+        <fieldset>
+          <legend>Оплачивает работодатель</legend>
+          <dl class="dl-horizontal">
+            <dt>Соц. отчисления</dt>
+            <dd id="soc_payment">-</dd>
+
+            <dt>Соц. налог</dt>
+            <dd id="soc_tax">-</dd>
+          </dl>
+        </fieldset>
 
         <dl class="dl-horizontal">
           <dt>На руки</dt>

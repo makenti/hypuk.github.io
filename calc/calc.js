@@ -14,12 +14,16 @@ accounting.settings = {
 	}
 }
 
+var min_salary = 18660;
+var mrp = 1731;
+$("#min_salary").html(min_salary);
+$("#mrp").html(mrp);
+
+
 function recalculate() {
 	var full_salary = $("#full_salary").val();
 	var number_of_working_days = $("#number_of_working_days").val();
 	var number_of_worked_days = $("#number_of_worked_days").val();
-	var min_salary = $("#min_salary").val();
-	var mrp = $("#mrp").val();
 
 	var payed = full_salary / number_of_working_days * number_of_worked_days;
 	var pension = 0;
