@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Salary Calculator</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="global-container">
+      <div class="container content-container well">
+        <h1>Калькулятор зп</h1>
+
+        <dl class="dl-horizontal">
+          <dt>Оклад</dt>
+          <dd><input type="text" id="full_salary"></dd>
+
+          <dt>Кол-во рабочих дней в месяце</dt>
+          <dd><input type="text" id="number_of_working_days" value="21"></dd>
+
+          <dt>Кол-во отработанных дней в месяце</dt>
+          <dd><input type="text" id="number_of_worked_days" value="21"></dd>
+        </dl>
+
+        <hr />
+        <dl class="dl-horizontal">
+          <dt>Минимальная ЗП</dt>
+          <dd><input type="text" id="min_salary" value="18660"></dd>
+
+          <dt>МРП</dt>
+          <dd><input type="text" id="mrp" value="1731"></dd>
+        </dl>
+
+        <dl class="dl-horizontal">
+          <dt>Начисление за месяц</dt>
+          <dd id="payed">-</dd>
+
+          <dt>Обязательные пенс. взносы</dt>
+          <dd id="pension">-</dd>
+
+          <dt>ИПН</dt>
+          <dd id="ipn">-</dd>
+        </dl>
+
+        <dl class="dl-horizontal">
+          <dt>Соц. отчисления</dt>
+          <dd id="soc_payment">-</dd>
+
+          <dt>Соц. налог</dt>
+          <dd id="soc_tax">-</dd>
+        </dl>
+
+        <dl class="dl-horizontal">
+          <dt>На руки</dt>
+          <dd id="result">-</dd>
+        </dl>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+<script src="accounting.js"></script>
+<script src="calc.js"></script>
+  </body>
+</html>
